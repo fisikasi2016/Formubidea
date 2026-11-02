@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="eu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#191919">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css?v=23">
+  <title>Formulazioaren bidea · Oxoazidoak eta oxogatzak</title>
+</head>
+<body>
+<div class="app-frame"><aside class="app-sidebar" id="app-sidebar" aria-label="Atalak"><div class="sidebar-brand">FORMULAZIOA <button id="sidebar-collapse" aria-label="Alboko barra tolestu" title="Alboko barra tolestu">☰</button></div><div class="sidebar-group"><div class="sidebar-caption">EDUKIAK</div><button class="nav-option active" data-section="acids" aria-pressed="true"><span class="nav-symbol">◈</span><span class="nav-label">Oxoazidoak</span></button><button class="nav-option" data-section="salts" aria-pressed="false"><span class="nav-symbol">▤</span><span class="nav-label">Oxogatzak</span></button></div></aside><main class="shell">
+  <header class="app-header">
+    <div>
+      <h1 id="app-title">Oxoazidoak izendapen tradizionalean</h1>
+    </div>
+    <img src="fisikasi-logo.jpg" alt="Fisikasi" class="fisikasi-logo" width="54" height="54">
+  </header>
+
+  <div class="top-panels">
+    <section class="panel">
+      <div class="row between wrap">
+        <h2>1. Aukeratu abiapuntua</h2>
+        <div class="seg" role="group" aria-label="Abiapuntua">
+          <button id="mode-name" class="active" aria-pressed="true">Izenetik</button>
+          <button id="mode-formula" aria-pressed="false">Formulatik</button>
+        </div>
+      </div>
+      <p class="hint" id="mode-help"></p>
+      <div class="chooser">
+        <label for="acid" id="choice-label">Oxoazidoa</label>
+        <select id="acid"></select>
+      </div>
+      <div id="selected" class="selected" aria-live="polite"></div>
+      <div class="actions compact-actions">
+        <button id="random" class="soft" type="button">Ausaz aukeratu 🎲</button>
+        <button id="start" class="primary">Hasi ibilbidea</button>
+        <button id="reset" class="soft">Berrabiarazi</button>
+      </div>
+      <button type="button" id="toggle-suffix" class="soft suffix-toggle" aria-expanded="false">Atzizki tradizionalen taula ▾</button>
+      <div id="suffix-reference" class="suffix-reference" hidden></div>
+    </section>
+
+  </div>
+
+  <section class="panel" id="journey">
+    <div class="row between wrap">
+      <h2>2. Ikusi urratsak</h2>
+      <span id="counter" class="counter">0 / 0 urrats</span>
+    </div>
+    <div class="journey-layout">
+      <aside class="instructions roadmap-panel" aria-label="Formulatzeko gida">
+        <div class="row between wrap">
+          <h3>Formulatzeko gida</h3>
+          <button id="toggle-rules" class="soft" aria-expanded="true">Gida ezkutatu</button>
+        </div>
+        <div id="rules" class="rules"></div>
+      </aside>
+      <div class="journey-work">
+        <div class="actions journey-actions">
+          <button id="prev" class="soft" disabled>← Aurrekoa</button>
+          <button id="next" class="primary" disabled>Hurrengo urratsa →</button>
+          <button id="all" class="soft" disabled>Dena erakutsi</button>
+        </div>
+        <p class="hint history-hint">Urrats berria goian agertuko da. Aurrekoak azpian gordeko dira.</p>
+        <div id="guide" class="guide" aria-live="polite" aria-relevant="additions text">
+          <p class="empty">Sakatu «Hasi ibilbidea».</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main></div>
+<script src="app.js?v=23" defer></script>
+</body>
+</html>
